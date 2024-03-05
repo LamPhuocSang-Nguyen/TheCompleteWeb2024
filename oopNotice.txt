@@ -1,0 +1,100 @@
+JavaScript
+
+Class: Có 3 cách tạo class trong javaScript
+
+cách 1: Using Function Constructors:
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.speak = function() {
+       console.log("Hello this is other way to declare a function in function constructor");
+};
+}
+
+// Adding methods to the prototype
+Person.prototype.sayHello = function() {
+  console.log("Hello, my name is " + this.name);
+};
+
+// Creating an instance of the Person class
+const person = new Person("John", 30);
+person.sayHello(); // Output: Hello, my name is John
+
+
+Cách 2:Using ES6 Class Syntax
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Method defined in the class
+  sayHello() {
+    console.log("Hello, my name is " + this.name);
+  }
+}
+
+// Creating an instance of the Person class
+const person = new Person("John", 30);
+person.sayHello(); // Output: Hello, my name is John
+
+
+Cách 3:Using Object.create():
+const personPrototype = {
+  sayHello: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+const person = Object.create(personPrototype);
+person.name = "John";
+person.age = 30;
+
+person.sayHello(); // Output: Hello, my name is John
+
+
+Object: Có 2 cách tạo object trong javascript
+
+
+Cách 1:Using object literal notation:
+// Object with properties defined inline
+const person = {
+  name: 'John',
+  age: 30,
+  city: 'New York',
+  speak(){
+	console.log("abc);
+}
+};
+
+// Accessing object properties
+console.log(person.name); // Output: John
+console.log(person.age); // Output: 30
+console.log(person.city); // Output: New York
+
+Cachs2:Using constructor function:
+
+// Constructor function
+function Person(name, age, city) {
+  this.name = name;
+  this.age = age;
+  this.city = city;
+}
+
+// Creating an instance of Person object using the new keyword
+const person = new Person('John', 30, 'New York');
+
+// Accessing object properties
+console.log(person.name); // Output: John
+console.log(person.age); // Output: 30
+console.log(person.city); // Output: New York
+
+
+
+anonymous function 
+callback function
+
+
+
+

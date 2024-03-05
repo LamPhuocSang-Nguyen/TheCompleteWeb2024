@@ -1,0 +1,41 @@
+/* Write your code here: */
+
+h1, h2{
+    color: blueviolet;
+}
+
+/*
+child 
+selector > selector{}
+*/
+.box > p{
+    color:firebrick
+}
+
+/*
+Decendant
+selector selector{
+*/
+.box li{
+    color: blue;
+}
+
+/*
+Chaining
+selectorselector{}
+*/
+
+li.done{
+    color: seagreen
+}
+
+/*
+Combining combiners
+ancestor  chainingchild
+selector selectorselector{}
+*/
+
+ul p.done{
+    font-size: 0.5rem;
+}
+
